@@ -1,8 +1,8 @@
 # Timer-Stopwatch
 
-My Second Flutter Project
+My third flutter Project
 
-## Getting Started
+## Features Implemented
 
 - Used dark theme
 - Used Timer() and Stopwatch() class
