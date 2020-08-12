@@ -21,7 +21,10 @@ class _TimerTabState extends State<TimerTab> {
   final oneSec = const Duration(seconds: 1);
 
   void startTimer() {
-    if (hr == 0 && min == 0 && sec == 0) return;
+    if (hr == 0 && min == 0 && sec == 0) {
+      showSnackbar(context);
+      return;
+    }
     setState(() {
       startBtnVisibility = false;
       pauseBtnVisibility = true;
@@ -142,5 +145,13 @@ class _TimerTabState extends State<TimerTab> {
               })
             ])
     ]));
+  }
+
+  void showSnackbar(BuildContext context) {
+    var snackbar = SnackBar(
+      content: Text('Pick a non-zero time'),
+    );
+
+    Scaffold.of(context).showSnackBar(snackbar);
   }
 }

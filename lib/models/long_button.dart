@@ -9,7 +9,7 @@ class FullBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(16.3, 5, 16.3, 40),
+      margin: EdgeInsets.fromLTRB(16.3, 5, 16.3, 48),
       child: SizedBox(
         width: double.infinity,
         child: MaterialButton(

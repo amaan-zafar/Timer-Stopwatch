@@ -9,7 +9,7 @@ class HalfBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(3.5, 5, 3.5, 40),
+      margin: EdgeInsets.fromLTRB(3.5, 5, 3.5, 48),
       child: SizedBox(
         width: 160,
         child: MaterialButton(
