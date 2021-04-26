@@ -4,7 +4,7 @@ class HalfBtn extends StatelessWidget {
   final String text;
   final Function onClicked;
 
-  HalfBtn(this.text, this.onClicked);
+  HalfBtn({@required this.text, @required this.onClicked});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,7 @@ class HalfBtn extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 12.0),
           child: Text(
             text,
-            style: TextStyle(
-              fontSize: 16.0,
-            ),
+            style: TextStyle(fontSize: 16.0, color: Colors.white),
           ),
           color: Colors.red,
           shape: RoundedRectangleBorder(

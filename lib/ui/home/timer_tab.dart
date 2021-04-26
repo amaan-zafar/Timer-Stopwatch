@@ -129,20 +129,28 @@ class _TimerTabState extends State<TimerTab> {
         height: 200,
       ),
       startBtnVisibility == true
-          ? FullBtn('Start', () {
-              startTimer();
-            })
+          ? FullBtn(
+              text: 'Start',
+              onClicked: () {
+                startTimer();
+              })
           : Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               pauseBtnVisibility == true
-                  ? HalfBtn('Pause', () {
-                      pauseTimer();
-                    })
-                  : HalfBtn('Resume', () {
-                      resumeTimer();
-                    }),
-              HalfBtn('Cancel', () {
-                cancelTimer();
-              })
+                  ? HalfBtn(
+                      text: 'Pause',
+                      onClicked: () {
+                        pauseTimer();
+                      })
+                  : HalfBtn(
+                      text: 'Resume',
+                      onClicked: () {
+                        resumeTimer();
+                      }),
+              HalfBtn(
+                  text: 'Cancel',
+                  onClicked: () {
+                    cancelTimer();
+                  })
             ])
     ]));
   }

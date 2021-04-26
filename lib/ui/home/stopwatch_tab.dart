@@ -99,22 +99,30 @@ class _StopwatchTabState extends State<StopwatchTab> {
           height: 350,
         ),
         startBtnVisibility == true
-            ? FullBtn('Start', () {
-                startStopwatch();
-              })
+            ? FullBtn(
+                text: 'Start',
+                onClicked: () {
+                  startStopwatch();
+                })
             : Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                     stopBtnVisibility == true
-                        ? HalfBtn('Pause', () {
-                            stopStopwatch();
-                          })
-                        : HalfBtn('Resume', () {
-                            resumeStopwatch();
-                          }),
-                    HalfBtn('Reset', () {
-                      resetStopwatch();
-                    })
+                        ? HalfBtn(
+                            text: 'Pause',
+                            onClicked: () {
+                              stopStopwatch();
+                            })
+                        : HalfBtn(
+                            text: 'Resume',
+                            onClicked: () {
+                              resumeStopwatch();
+                            }),
+                    HalfBtn(
+                        text: 'Reset',
+                        onClicked: () {
+                          resetStopwatch();
+                        })
                   ])
       ]),
     );

@@ -4,7 +4,7 @@ class FullBtn extends StatelessWidget {
   final String text;
   final Function onClicked;
 
-  FullBtn(this.text, this.onClicked);
+  FullBtn({@required this.text, @required this.onClicked});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,8 @@ class FullBtn extends StatelessWidget {
           onPressed: onClicked,
           padding: EdgeInsets.symmetric(vertical: 12.0),
           child: Text(
-            'Start',
-            style: TextStyle(
-              fontSize: 16.0,
-            ),
+            text,
+            style: TextStyle(fontSize: 16.0, color: Colors.white),
           ),
           color: Colors.red,
           shape: RoundedRectangleBorder(
