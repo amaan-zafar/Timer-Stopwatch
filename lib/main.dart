@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:timer_stopwatch/tabs/timer_tab.dart';
-import 'package:timer_stopwatch/tabs/stopwatch_tab.dart';
+import 'package:timer_stopwatch/ui/preference/preference_screen.dart';
+import 'package:timer_stopwatch/ui/tabs/timer_tab.dart';
+
+import 'ui/tabs/stopwatch_tab.dart';
 
 void main() {
   runApp(ClockApp());
@@ -16,7 +18,6 @@ class ClockApp extends StatelessWidget {
         brightness: Brightness.dark,
         accentColor: Colors.red,
         canvasColor: Colors.grey[900],
-        textTheme: TextTheme(),
       ),
       home: HomePage(),
     );
@@ -48,9 +49,22 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: SafeArea(
           child: Column(
             children: <Widget>[
-              // Expanded(
-              //   child: Container(),
-              // ),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 16),
+                height: 40,
+                child: Align(
+                    alignment: Alignment.centerRight,
+                    child: GestureDetector(
+                      child: Icon(
+                        Icons.settings,
+                        color: Colors.red,
+                      ),
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (_) => PreferenceScreen()));
+                      },
+                    )),
+              ),
               TabBar(
                 tabs: <Widget>[Text('Timer'), Text('Stopwatch')],
                 labelStyle:
@@ -61,7 +75,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ],
           ),
         )),
-        preferredSize: Size.fromHeight(kToolbarHeight),
+        preferredSize: Size.fromHeight(40 + kToolbarHeight),
       ),
       body: TabBarView(
         children: <Widget>[
