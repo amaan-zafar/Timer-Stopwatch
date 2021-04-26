@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:timer_stopwatch/ui/widgets/long_button.dart';
-import 'package:timer_stopwatch/ui/widgets/short_button.dart';
-import 'package:timer_stopwatch/ui/widgets/time_picker.dart';
+import 'package:timer_stopwatch/ui/global/widgets/long_button.dart';
+import 'package:timer_stopwatch/ui/global/widgets/short_button.dart';
+import 'package:timer_stopwatch/ui/global/widgets/time_picker.dart';
 import 'dart:async';
 
 class TimerTab extends StatefulWidget {
